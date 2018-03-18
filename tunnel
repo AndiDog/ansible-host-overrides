@@ -1,0 +1,2 @@
+#!/bin/sh
+ssh -NL 127.0.0.1:9922:127.0.0.1:22 -p 622 dog@andidog.noip.me

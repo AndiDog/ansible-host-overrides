@@ -1,0 +1,2 @@
+#!/bin/sh
+exec ansible-playbook -i inventory.yml -i extrainv test.yml

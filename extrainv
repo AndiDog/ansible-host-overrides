@@ -1,0 +1,7 @@
+# Packer would autogenerate this until I submit a patch to allow it to write...
+# homeserver_and_jails_group ansible_host=127.0.0.1 ansible_port=9922
+
+# ...group variables instead of host variables:
+[homeserver_and_jails_group:vars]
+ansible_host=127.0.0.1
+ansible_port=9922

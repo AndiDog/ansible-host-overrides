@@ -1,0 +1,12 @@
+all:
+  vars:
+    # Unimportant, this is just the required user for my homeserver
+    ansible_user: dog
+
+homeserver_and_jails_group:
+  hosts:
+    homeserver:
+    firstjail@homeserver:
+      ansible_connection: sshjail
+    secondjail@homeserver:
+      ansible_connection: sshjail

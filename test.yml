@@ -1,0 +1,22 @@
+- hosts: homeserver
+
+  tasks:
+    - name: Should ping homeserver
+      ping:
+      ignore_errors: yes
+
+- hosts: firstjail@homeserver
+
+  tasks:
+    - name: Should ping firstjail@homeserver
+      ping:
+      ignore_errors: yes
+
+    - name: Should ping homeserver (delegated)
+      ping:
+      delegate_to: homeserver
+
+    - name: Should ping secondjail@homeserver (delegated)
+      ping:
+      delegate_to: secondjail@homeserver
+      ignore_errors: yes
